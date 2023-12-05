@@ -1,0 +1,53 @@
+@import "./includes";
+
+body {
+    @include grid;
+}
+
+form {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: $light;
+    padding: 48px 36px;
+    border-radius: 36px;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(1, 108, 108);
+    margin-bottom: 16px;
+}
+
+a {
+    color: $primary;
+    text-align: center;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+        @include grid($ji:center, $pi:center);
+        flex: 1 1 400px;
+    }
+}
+
+.jumbo-text {
+    font: {
+        weight: 600;
+        size: clamp(16px, 16px + 2.5em ,3.5em);
+    }
+    text-align: center;
+}
+
+
+.welcome {
+    @extend .primary-bg;
+}
+
+.form-container {
+    background-color: fade-out($primary, 0.9);
+}

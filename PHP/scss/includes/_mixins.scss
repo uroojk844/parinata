@@ -1,0 +1,30 @@
+@mixin grid($gap:null, $gtc:null, $gtr:null , $pi: null, $ai: null, $ac: null, $pc:null, $ji:null, $jc: null){
+    display: grid;
+    @if($gap) {
+        gap: $gap;
+    }
+    @if($gtc) {
+        grid-template-columns: $gtc;
+    }
+    @if($gtr) {
+        grid-template-rows: $gtr;
+    }
+    @if($ai) {
+        align-items: $ai;
+    }
+    @if($ac) {
+        align-content: $ac;
+    }
+    @if($pi) {
+        place-items: $pi;
+    }
+    @if($pc) {
+        place-content: $pc;
+    }
+    @if($ji) {
+        justify-items: $ji;
+    }
+    @if($jc) {
+        justify-content: $jc;
+    }
+}
